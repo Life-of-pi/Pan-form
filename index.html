@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Form Page</title>
+  <style>
+    table,
+      {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 7px;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="0" width="98%">
+    <tr>
+      <td colspan="4" align="CENTER">
+        <strong>Request For New PAN Card Or/And Changes Or Correction in PAN Data</strong><br>
+        <em>Fields marked with *(asterisk) are mandatory</em>
+      </td>
+    </tr>
+  </table>
+
+  <form class="" action="NewPan" method="POST">
+    <table width="85%">
+      <tbody>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5" width="98%">
+            <label for="isCitizen"><strong>*Whther citizen of India</strong></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Yes <input type="radio" name="isCitizen" value="Yes">
+            &nbsp;
+            No<input type="radio" name="isCitizen" value="No">
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5" width="98%">
+            <label for="PAN_NUM"><strong>*Permanent Account Number (PAN)</strong></label>
+            <input type="text" name="PAN_NUM" value="" size="15" maxlength="10" placeholder="ETA-AZ-1278">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" name="pan_name_chek" value="Y">
+          </td>
+          <td colspan="5">
+            <label for="pan_name_check"><strong>* 1.Name</strong></label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5"><strong>Title</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="Shri">Shri/Mr</label>
+            <input type="radio" name="title" value="1">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="Smt">Smt./Mrs.</label>
+            <input type="radio" name="title" value="2">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="Kumari">Kumari/Ms</label>
+            <input type="radio" name="title" value="3">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="M/s">M/s</label>
+            <input type="radio" name="title" disabled>
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td><strong>*Last Name/Surname</strong><br>
+                    <input type="text" name="lastName" value="" size="15" maxlength="20">
+                  </td>
+                  <td><strong>*First Name</strong><br>
+                    <input type="text" name="firstName" value="" size="15" maxlength="20">
+                  </td>
+                  <td><strong>*Middle Name</strong><br>
+                    <input type="text" name="middleName" value="" size="15" maxlength="20">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5">
+            <strong>Name as you would like it printed on the card</strong>
+            (Prefix like Shri, Smt, Kumari, Late,Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5">
+            <input type="text" name="fullName" value="" size="40" maxlength="85">
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5">
+            <strong>Details of Parents.</strong>
+            (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed.)</span></font>
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <strong>Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only</strong> <br>
+          </td>
+          <td colspan="5">
+            Yes
+            <input type="radio" name="MotherNameflag" value="yes" disabled>
+            No <input type="radio" name="MotherNameflag" value="no">
+            <br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td><strong>*Date of Birth/Incorporation/Agreement/Partnership<br>
+                      or Trust Deed/Formation of Body of Individuals/<br>
+                      Association of Persons</strong>
+                  </td>
+                  <td><br>
+                    <input type="date" name="DOB" value="" size="15">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" name="PAN_SEX_CHK" value="Y">
+          </td>
+          <td><strong>*&nbsp;&nbsp; Gender</strong></td>
+          <td colspan="5">
+            Male <input type="radio" name="PAN_SEX" value="M">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Female <input type="radio" name="PAN_SEX" value="F">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            TransGender <input type="radio" name="PAN_SEX" value="T">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" name="address" value="Y">
+          </td>
+          <td><strong>*&nbsp;&nbsp; Address of communication</strong></td>
+          <td colspan="5">
+            Residential <input type="radio" name="address" value="M">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Office <input type="radio" name="address" value="F">
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td><b>Flat/Door/Block No.</b></td>
+          <td><input type="text" name="PAN_RO1_ADDR1" value="" size="25" maxlength="25"></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td><b>Name of Premises/Building/Village</b></td>
+          <td><input type="text" name="PAN_RO1_ADDR2" value="" size="25" maxlength="25"></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td><b>Road/Street/Lane/Post Office</b></td>
+          <td><input type="text" name="PAN_RO1_ADDR3" value="" size="25" maxlength="25"></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td><b>Area/Locality/Taluka/Sub-Division</b></td>
+          <td><input type="text" name="PAN_RO1_ADDR4" value="" size="25" maxlength="25"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><b>Town/City/District</b></td>
+          <td><input type="text" name="PAN_RO1_ADDR5" value="" size="25" maxlength="25"></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+          <td><b>State/Union Territory</b></td>
+          <td>
+            <select name="PAN_RO1_STATE">
+              <option value="">-- Please Select --</option>
+              <option value="1"> Andaman &amp; Nicobar Islands</option>
+              <option value="2"> Andhra Pradesh</option>
+              <option value="3"> Arunachal Pradesh</option>
+              <option value="4"> Assam</option>
+              <option value="5"> Bihar</option>
+            </select>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input type="checkbox" name="onlinePay" value="Y">
+          </td>
+          <td colspan="5">
+            <label for="onlinePay"><strong>* Online Payment</strong></label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+        <!-- <tr>
+
+          <td>&nbsp;</td>
+          <td colspan="5">
+
+          </td>
+        </tr> -->
+        <table  <table width="85%" cellpadding="0" cellspacing="10">
+            <tbody>
+              <tr>
+                <td>
+                  Upload Doucuments<br>
+                  <input type="file" name="document" value="">
+                </td>
+                <td>
+                  Upload Photo<br>
+                  <input type="file" name="photo" value="">
+                </td>
+                <td>
+                  Upload Signature<br>
+                  <input type="file" name="signature" value="">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+              <tr>
+                <td>
+                  <br>ALREADY UPLOADED PHOTO:</td>
+                <td><input type="text" size="30" id="oldPic" name="picFile" value="" readonly="readonly">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <br>ALREADY UPLOADED SIGNATURE:</td>
+                <td><input type="text" id="sign" name="signname" value="" readonly="readonly">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <br>ALREADY UPLOADED DOCUMENTS:</td>
+                <td>
+                  <textarea rows="7" cols="40" id="docState" name="docs" readonly="readOnly"></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="5">
+                  <input type="submit" name="submit" value="submitt" id="submittId">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+    </form>
+  </body>
+
+
+</html>
